@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my Dream Place</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        position: relative;
+      }
+
+      .container{
+        width: 100%;
+        /* border: 1px solid black; */
+      }
+
+      .header{
+        display: flex;
+        align-items: center;
+      }
+
+      .logo{
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        margin: 4px;
+      }
+
+      .headerlogo{
+        padding-right: 100px;
+      }
+     
+      nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 170px;
+      }
+
+      nav ul{
+        width: 60%;
+        list-style: none;
+        text-align: right;
+        padding-right: 100px;
+      }
+
+      .headingLi{
+        list-style: none;
+        display: inline-block;
+        color: var(--Gray-1, #333);
+        font-family: SF Pro Display;
+        font-size: 16px; 
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.32px;
+        padding-left: 50px;
+      }
+
+      button{
+        display: inline-flex;
+        padding: 10px 18px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        background: white;
+        border: 1px solid var(--Blue-1, #2F80ED);
+      }
+
+      .register{
+        color: var(--Blue-1, #2F80ED);
+        font-family: SF Pro Display;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; 
+        letter-spacing: 0.3px;
+      }
+
+      .signin{
+        color: #FFF;
+        font-family: SF Pro Display;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; 
+        letter-spacing: 0.3px;
+        background: var(--Blue-1, #2F80ED);
+      }
+
+      .rectangle2{
+        padding-left: 88px;
+        width: 94%;
+        padding-top: 5px;
+      }
+
+      .rectangle2content{
+        position: absolute;
+        top: 250px;
+        /* text-align: center; */
+        padding-left: 380px;
+      }
+
+      h3{
+        color: #FFF;
+        text-align: center;
+        font-family: SF Pro Display;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        padding-right: 10px;
+      }
+
+      .lorem{
+        color: #FFF;
+        text-align: center;
+        font-family: SF Pro Display;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+        letter-spacing: 0.4px;
+        
+      }
+
+      .container1{
+        position: absolute;
+        top: 530px;
+        padding-left: 266px;
+      }
+      
+      .rectangle3{
+        width: 1000px;
+        height: 58px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0px 4px 37px 0px rgba(0, 0, 0, 0.15);
+        /* border: 1px solid black; */
+      }
+
+      .components{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 5.9px;
+      }
+
+      h5{
+        color: var(--Gray-2, #4F4F4F);
+        font-family: "SF Pro Display";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: 0.28px;
+        width: 142px;
+        flex-shrink: 0;
+      }
+
+      .component1{
+        display: flex;
+        width: 240px;
+        padding: 11px 12px 12px 12px;
+        align-items: center;
+        gap: 4px;
+        /* border: 1px solid black; */
+        border-radius: 4px;
+        background: var(--Gray-6, #F2F2F2);
+      }
+
+      .component2{
+        display: flex;
+        width: 170px;
+        padding: 11px 12px 12px 12px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+        background: var(--Gray-6, #F2F2F2);
+      }
+
+      .component3{
+        display: flex;
+        width: 170px;
+        padding: 11px 12px 12px 12px;
+        align-items: center;
+        gap: 4px;
+        border-radius: 4px;
+        background: var(--Gray-6, #F2F2F2);
+      }
+
+      .component4{
+        display: flex;
+        width: 210px;
+        padding: 11px 12px 12px 12px;
+        align-items: center;
+        gap: 4px;
+        /* border: 1px solid black; */
+        border-radius: 4px;
+        background: var(--Gray-6, #F2F2F2);
+      }
+
+      .search{
+        border-radius: 6px;
+        background: var(--Blue-1, #2F80ED);
+        color: #FFF;
+        font-family: "SF Pro Display";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 133.333% */
+        letter-spacing: 0.3px;
+        display: flex;
+        width: 148px;
+        padding: 12px 18px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .container2{
+        width: 1175px;
+        height: 70px;
+        border-radius: 8px;
+        background-color: #FCEFCA;
+        /* border: 1px solid black; */
+        margin-left: 172px;
+        margin-top: 80px;
+      }
+
+      .alert{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .dangerlogo{
+        width: 32px;
+        height: 32px;
+        background-color: #292D32;
+      }
+
+      .covid{
+        color: var(--Gray-1, #333);
+       font-family: "SF Pro Display";
+       font-size: 16px;
+       font-style: normal;
+       font-weight: 400;
+       line-height: 140%; /* 22.4px */
+       letter-spacing: 0.32px;
+      }
+
+      .learnmore{
+        color: var(--Blue-1, #2F80ED);
+        font-family: "SF Pro Display";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.32px;
+      }
+
+      .bold{
+        margin-top: 30px;
+        width: 620px;
+        height: 32px;
+        flex-shrink: 0;
+        color: #181818;
+        font-family: "SF Pro Display";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 10px;
+        padding-left: 75px;
+      }
+
+      .paraofbold{
+        width: 900px;
+        color: var(--Gray-1, #333);
+        font-family: "SF Pro Display";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 22.4px */
+        letter-spacing: 0.32px;
+        padding-left: 175px;
+      }
+
+      .container3{
+        /* border: 1px solid black; */
+        width: 1180px;
+        margin-left: 170px;
+        margin-top: 20px ;
+      }
+
+      .countries{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .countriesimg{
+        width: 275px;
+        height: 220px;
+        flex-shrink: 0;
+      }
+
+      h4{
+        width: 295px;
+        color: #181818;
+        font-family: "SF Pro Display";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .properties{
+        width: 295px;
+        color: #181818;
+        font-family: "SF Pro Display";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.28px;
+      }
+
+      .bold1{
+        width: 650px;
+        height: 32px;
+        flex-shrink: 0;
+        color: #181818;
+        font-family: "SF Pro Display"; 
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-left: 90px;
+        margin-top: 40px;
+      }
+
+      .container4{
+        /* border: 1px solid black; */
+        width: 1180px;
+        margin-left: 165px;
+    }
+
+     .worldtrip{
+        display: flex;
+        justify-content: space-between;
+     }
+
+     .trip{
+        width: 358px;
+        height: 250px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+     }
+
+     .upperpara{
+      position: absolute;
+      top: 1480px;
+     }
+
+     #upperpara3{
+      top: 1460px;
+      /* border: 1px solid black; */
+      /* width: 360px; */
+      /* height: 200px; */
+     }
+
+     .bestplace{
+        width: 360px;
+        color: #fff;
+        font-family: "SF Pro Display";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-left: 15px;
+     }
+
+     .paraofplace{
+        width: 430px;
+        color:  #fff;
+        font-family: "SF Pro Display";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 22.4px */
+        letter-spacing: 0.32px;
+        padding-left: 15px;
+     }
+
+     .Popular{
+        width: 504px;
+        height: 32px;
+        flex-shrink: 0;
+        color: #181818;
+        font-family: "SF Pro Display";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-left: 38px;
+        margin-top: 40px;
+     }
+
+     .container5{
+        /* border: 1px solid black; */
+        width: 1180px;
+        margin-left: 165px;
+        margin-top: 20px;
+     }
+
+     .popularhotel{
+        display: flex;
+        justify-content: space-between;
+     }
+
+     #hotel1{
+        width: 285px;
+        height: 270px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        margin-left: 2px;
+     }
+
+     .placename{
+        color: #181818;
+        font-family: "SF Pro Display";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-left: 8px;
+        padding-top: 3px;
+     }
+
+     .properties1{
+        width: 295px;
+        color: #181818;
+        font-family: "SF Pro Display";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        padding-left: 8px;
+     }
+
+     .container6{
+      margin-top: 40px;
+     }
+     
+     .img18{
+        width: 1336px;
+        height: 280px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 100%), url(<path-to-image>), lightgray 1240px 553.081px / -100% -295.058% no-repeat;
+        padding-left: 165px;
+     }
+
+     .dld{
+        width: 700px;
+        color: #FFF;
+        font-family: "SF Pro Display";
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 39.2px */
+        padding-left: 220px;
+        position: absolute;
+        top: 2000px;
+     }
+
+     .Download{
+        color: #FFF;
+        font-family: "SF Pro Display";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 133.333% */
+        letter-spacing: 0.3px;
+        display: flex;
+        padding: 12px 18px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        background: var(--Blue-1, #2F80ED);
+        position: absolute;
+        top: 2100px;
+        margin-left: 220px;
+     }
+
+     .footer{
+        display: flex;
+        width: 1000px;
+        height: 32px;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 30px;
+     }
+
+     .footertag{
+        color: #181818;
+        text-align: center;
+        font-family: "SF Pro Display";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; /* 39.2px */
+        padding-left: 480px;
+     }
+
+     .footerpara{
+        width: 1000px;
+        color: var(--Blue-1, #2F80ED);
+        text-align: center;
+        font-family: "SF Pro Display";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 22.4px */
+        letter-spacing: 0.32px;
+        padding-left: 560px;
+     }
+
+     .container7{
+      margin-top: 60px;
+     }
+
+        .lastbox{
+          width: 1180px;
+          height: 450px;
+          /* border: 1px solid black; */
+          margin-left: 148px;
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .section{
+          width: 800px;
+          height: 280px;
+          /* border: 1px solid black; */
+          padding-top: 10px;
+        }
+
+        .main{
+          display: flex;
+          width: 165px;
+        }
+
+        .topic{
+          color: #1B1F2D;
+          font-family: "SF Pro Display";
+          font-size: 18px;
+          font-style: normal;
+          /* font-weight: 500; */
+          line-height: normal;
+          letter-spacing: 0.36px;
+        }
+        
+        .topicpara{
+          padding-top: 10px;
+          padding-left: 18px;
+        }
+
+        #topic{
+          padding-left: 54px;
+        }
+        
+        .list{
+          padding-top: 15px;
+          padding-left: 5px;
+          line-height: 28px;
+        }
+
+        li{
+          display: flex;
+          line-height: 30px;
+        }
+
+        #second{
+          width: 700px;
+        }
+
+        #third{
+          width: 910px;
+        }
+
+        #forth{
+          width: 800px;
+        }
+
+        #fifth{
+          width: 950px;
+        }
+       
+        .seemore{
+          color: var(--Blue-1, #2F80ED);
+        }
+
+        #topic:hover{
+          text-decoration: underline skyblue;
+        }
+
+        ol li:hover{
+          text-decoration: underline skyblue;
+        }
+
+        .copyright{
+          display: flex;
+          justify-content: center;
+          padding-left: 45rem;
+          padding-top: 10px;
+        }
+
+        .ending{
+          background-color: lightgrey;
+          height: 50px;
+          width: 1515px;
+        }
+
+        .copypara{
+          padding-left: 5px;
+          font-size: 17px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <!-- container 1 -->
+    <div class="container">
+        <nav>
+            <!-- logo and website name -->
+            <div class="header">
+           <img src="bxs-plane-alt 1.jpg" class="logo">
+           <p class="headerlogo">my Dream Place</p>
+           </div>
+
+            <!-- navigation bar -->
+            <ul>
+                <li class="headingLi">Home</li>
+                <li class="headingLi">Discover</li>
+                <li class="headingLi">Activities</li>
+                <li class="headingLi">About</li>
+                <li class="headingLi">Contact</li>
+            </ul>
+
+            <!-- header button -->
+            <button class="register">Register</button>
+            <button class="signin">Sign in</button>
+        </nav>
+    </div>
+
+         <!-- rectangle2 -->
+         
+         <div class="rectangle2">
+           <img src="Rectangle 2.jpg" class="rectangle2"/>
+           <div class="rectangle2content">
+           <h3>Enjoy Your Dream Vacation</h3>
+           <p class="lorem">Plan and book our perfect trip with expert advice, travel tips, destination <p class="lorem"> information and  inspiration from us</p></p>
+           </div>
+           </div>
+         
+           <div class="container1">
+         <!-- rectangle3 -->
+         <div class="rectangle3">
+         <!-- components -->
+           <div class="components">
+
+           <!-- component1 -->
+             <div class="component1" id="logo">
+             <img src="location 1.jpg" class="location" id="imglogo"/>
+             <div class="locationcontent" id="content">
+                <h5>Where are you going?</h5>
+             </div>
+             </div>
+
+           <!-- component2 -->
+             <div class="component2" id="logo">
+             <img src="calendar 1.jpg" class="calender" id="imglogo"/>
+             <div class="calendercontent" id="content">
+                <h5>Check in date</h5>
+             </div>        
+             </div>
+
+           <!-- component3 -->
+             <div class="component3" id="logo">
+             <img src="calendar 1.jpg" class="calender" id="imglogo"/>
+             <div class="calendercontent2" id="content">
+                <h5>check out date</h5>
+             </div>        
+             </div>
+
+            <!-- component4 -->  
+             <div class="component4" id="logo">
+             <img src="user-square 1.jpg" class="guest" id="imglogo">
+             <div class="guestcontent">
+                <h5>Guest</h5>
+             </div>        
+             </div>
+
+             <!-- search button -->
+             <button class="search">Search</button>
+           </div>
+         </div>   
+         </div>
+        
+         <!-- alert section -->
+         <div class="container2">
+            <div class="alert">
+             <img src="danger 1.jpg" class="dangerlogo"/>
+             <p class="covid">Check the latest COVID-19 restrictions before you travel. <span class="learnmore">Learn more</span>  
+             </p>
+             </div>
+         </div>
+
+         <h3 class="bold">Enjoy your dream vacation</h3>
+         <p class="paraofbold">Plan and book our perfect trip with expert advice, travel tips, destination information and  inspiration from us</p>
+
+         <!-- container3 of contries -->
+         <div class="container3">
+            <div class="countries">
+                <div class="box" id="Australia">
+                    <img src="Rectangle 8.jpg" class="countriesimg"/>
+                    <h4>Australia</h4>
+                    <p class="properties">2246 properties</p>
+                </div>
+
+                <div class="box" id="Japan">
+                    <img src="Rectangle 9.jpg" class="countriesimg"/>
+                    <h4>Japan</h4>
+                    <p class="properties">1278 properties</p>
+                </div>
+
+                <div class="box" id="NewZealand">
+                    <img src="Rectangle 10.jpg" class="countriesimg"/>
+                    <h4>New Zealand</h4>
+                    <p class="properties">480 properties</p>
+                </div>
+
+                <div class="box" id="Greece">
+                    <img src="Rectangle 11.jpg" class="countriesimg"/>
+                    <h4>Greece</h4>
+                    <p class="properties">320 properties</p>
+                </div>
+            </div>
+         </div>
+
+          <!-- container4 next trip -->
+         <h3 class="bold1">Get inspiration for your next trip</h3><br>
+
+         <!-- container4 -->
+         <div class="container4">
+            <div class="worldtrip">
+
+           <div class="box" id="trip1">
+             <img src="Rectangle 8 (1).jpg" class="trip" id="trip1"/>
+             <div class="upperpara">
+             <h4 class="bestplace">Sydeny’s 10 most fashionable 5 star hotels</h4>
+             <p class="paraofplace">Browse the fastest growing tourism sector in the heart of Australia tourism capital ....</p>
+             </div>
+           </div>
+
+           <div class="box" id="trip2">
+            <img src="Rectangle 16.jpg" class="trip" id="trip2"/>
+           <div class="upperpara">
+            <h4 class="bestplace">Top cities for Vegan Travellers</h4>
+            <p class="paraofplace">Top sites where you do not have to worry about being a vegan. Our tourist guide is here...</p>
+            </div>
+           </div>
+
+           <div class="box" id="trip3">
+            <img src="Rectangle 17.jpg" class="trip" id="trip3"/>
+            <div class="upperpara" id="upperpara3">
+            <h4 class="bestplace" id="bestplace3" >World’s top destinations during and post covid timeline</h4>
+            <p class="paraofplace" id="paraofplace3">Pandemic is still intact and will be here for a longer <p class="paraofplace"> time. Here’s where your next destination...</p></p>
+            </div>
+           </div>
+           </div>
+         </div>
+          
+         <!-- container5 popular hotels -->
+         <h3 class="Popular">Popular hotels</h3>
+
+         <!-- container5 -->
+         <div class="container5">
+          <div class="popularhotel">
+
+            <div class="box" id="hotel">
+                <img src="Rectangle 8 (2).jpg" id="hotel1"/>
+                <div class="upperpara1">
+                 <h4 class="placename">Lakeside Motel Warefront</h4>
+                 <p class="properties1">2246 properties</p>
+                </div>
+            </div>
+
+            <div class="box" id="hotel">
+                <img src="Rectangle 9 (1).jpg" id="hotel1"/>
+                <div class="upperpara1">
+                 <h4 class="placename">Recce Graham resort</h4>
+                 <p class="properties1">1278 properties</p>
+                </div>
+            </div>
+
+            <div class="box" id="hotel">
+                <img src="Rectangle 10 (1).jpg" id="hotel1"/>
+                <div class="upperpara1">
+                 <h4 class="placename">Fireside Dinners</h4>
+                 <p class="properties1">480 properties</p>
+                </div>
+            </div>
+
+            <div class="box" id="hotel">
+                <img src="Rectangle 11 (1).jpg" id="hotel1"/>
+                <div class="upperpara1">
+                 <h4 class="placename">Oculous Inn Stay</h4>
+                 <p class="properties1">320 properties</p>
+                </div>
+            </div>
+          </div>
+         </div>
+
+         <div class="container6">
+            <div class="rectangle18">
+                <img src="Rectangle 18.jpg" class="img18"/>
+                <h2 class="dld">Download the mobile application for bonus coupons and travel codes</h2>
+            </div>
+            <button class="Download">Download mobile app</button>
+         </div>
+         <br>
+            
+         <div class="footer">
+           <h2 class="footertag">Explore the world with My Dream place</h2>
+           <p class="footerpara">Discover new places and experiences</p>
+           </div>
+
+           <!-- container 7 -->
+         <div class="container7">
+           <div class="lastbox">
+
+            <div class="section" id="first">
+              <div class="main">
+              <img src="bxs-plane-alt 1.jpg" alt="plane"/>
+              <h6 class="topic">my Dream place</h6>
+              </div>
+              <p 
+              class="topicpara">Your next goto companion for<br> travel</p>
+            </div>
+
+            <div class="section" id="second">
+              <h6 class="topic" id="topic">
+                Company
+              </h6>
+              <ol class="list">
+                <li>About</li>
+                <li>Jobs</li>
+                <li>Newsroom</li>
+                <li>Advertising</li>
+                <li>Contact us</li>
+              </ol>
+            </div>
+
+            <div class="section" id="third">
+              <h6 class="topic" id="topic">
+                Explore
+              </h6>
+              <ol class="list">
+                <li>Australia</li>
+                <li>New Zealand</li>
+                <li>United States America (USA)</li>
+                <li>Greece</li>
+                <li>Maldives</li>
+                <li>Singapore</li>
+                <li class="seemore">See more</li>
+              </ol>
+            </div>
+
+            <div class="section" id="forth">
+              <h6 class="topic" id="topic">
+                Terms and Policies
+              </h6>
+              <ol class="list">
+                <li>Privacy Policy</li>
+                <li>Terms of use</li>
+                <li>Acessibility</li>
+                <li>Reward system policy</li>
+              </ol>
+            </div>
+
+            <div class="section" id="fifth">
+              <h6 class="topic" id="topic">
+                Help
+              </h6>
+              <ol class="list">
+                <li>Support</li>
+                <li>Cancle your bookings</li>
+                <li>Use Coupon</li>
+                <li>Refund policies</li>
+                <li>International Travel Documnets</li>
+              </ol>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="ending">
+          <div class="copyright">
+            <img class="copy" src="copyright 1.jpg" alt=""/>
+            <p class="copypara">my Dream Place 2024</p>
+          </div>
+        </div>
+          
+</body>
+</html>
